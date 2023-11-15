@@ -103,36 +103,21 @@ function updateCoffees(coffees) {
     coffeeContainer.appendChild(coffeeFragment);
 }
 
-// document.addEventListener('DOMContentLoaded', function () {
-//     const toDoForm = document.getElementById('to-do-form');
-//     const toDoList = document.getElementById('to-do-list');
-//
-//     toDoForm.addEventListener('submit', function (event) {
-//         event.preventDefault(); // Prevent the default form submission behavior
-//
-//         const toDoInput = document.getElementById('to-do');
-//         const toDoValue = toDoInput.value;
-//
-//         if (toDoValue.trim() !== '') {
-//             // Create a new list item
-//             const listItem = document.createElement('li');
-//             listItem.className = 'list-group-item';
-//             listItem.textContent = toDoValue;
-//
-//             // Append the new list item to the to-do list
-//             toDoList.appendChild(listItem);
-//
-//             // Clear the input field
-//             toDoInput.value = '';
-//         }
-//     });
-// });
-
-// const addBtn = document.querySelector('#addBox');
-// const addForm = document.querySelector('#addForm');
-// const addInput = document.querySelector('#addInput');
-// const roastSelection = document.querySelector('#roast-selection');
-//
+const addBtn = document.querySelector('#addBox');
+addBtn.addEventListener('click', e=>{
+    e.preventDefault();
+    const roastValue = document.querySelector('#roast-selection').value;
+    const coffeeName = document.querySelector('#inputForm').value;
+    const newCoffee = {
+        id: coffees.length + 1,
+        name: coffeeName,
+        roast: roastValue
+    };
+    coffees.push(newCoffee);
+    updateCoffees(coffees);
+    document.querySelector('#inputForm').value = '';
+    document.querySelector('#roast-selection').value = '';
+});
 
 
 // MAIN
