@@ -11,6 +11,7 @@ div .custom {
 div .custom:hover {
     background-color: #795548;
     border: 2px inset black;
+    opacity: .5;
 }
 .fc {
     font-family: "Dancing Script", cursive;
@@ -21,6 +22,14 @@ div .custom:hover {
 
 p {
     font-size: 2rem;
+    text-align: center;
+    padding: unset;
+    margin: unset;
+    font-family: Papyrus, fantasy;
+}
+select {
+    border: 4px solid black;
+    opacity: .5;
 }
 
 

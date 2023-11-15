@@ -33,7 +33,7 @@ const renderCoffee = (coffees) => {
             coffeeImage = "https://via.placeholder.com/84x70?";
     }
     coffeeCard.innerHTML = `
-        <div class="card custom border border-black rounded" style="width: 18rem;">
+        <div class="card custom border border-black rounded m-2" style="width: 18rem;">
         <img src="${coffeeImage}" class="card-img-top" alt="coffee pic">
         <div class="card-body coffee">
             <p>${coffees.name}</p>
