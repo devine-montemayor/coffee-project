@@ -14,14 +14,8 @@
             <form class="d-flex" role="search">
                 <input id="search" class="form-control me-2" type="search" placeholder="Search your coffee.." aria-label="Search">
             </form>
-        </div>
-    </header>
-
-    <section class="container text-center m-5">
-    <div class="row align-items-center">
-        <div class="col">
             <label for="roast-selection">
-                <select class="form-select-lg"  id="roast-selection">
+                <select class="form-select-lg m-2"  id="roast-selection">
                     <option value="" selected>All</option>
                     <option value="light">light</option>
                     <option value="medium">medium</option>
@@ -29,10 +23,23 @@
                 </select>
             </label>
         </div>
+    </header>
+
+    <section class="container text-center m-5">
+    <div class="row align-items-center">
         <div class="col">
-            <a href="#bottom">
-                <button class="btn" id="addBox" style="width: 100%; background-color: #000; color: #fff; font-family: Dancing Script, cursive; font-size: 22px" href="#bottom">Add New Coffee</button>
-            </a>
+            <button class="btn" id="addBox" style="width: 100%; background-color: #000; color: #fff; font-family: Dancing Script, cursive; font-size: 22px" href="#bottom">Add New Coffee</button>
+            <label class="my-2" for="roastSelect">
+                <select class="fixed text-center" id="roastSelect" style="font-weight: bold">
+                    <option selected>Pick a roast</option>
+                    <option value="light">light</option>
+                    <option value="medium">medium</option>
+                    <option value="dark">dark</option>
+                </select>
+            </label>
+            <label class="my-2" for="inputForm">
+                <input type="text" class="fixed" id="inputForm" placeholder="Coffee Name" style="font-family: Dancing Script, cursive; font-weight: bold">
+            </label>
         </div>
     </div>
 </section>
@@ -41,25 +48,7 @@
 <!--COFFEE CARDS ARE ADDED HERE-->
     </div>
 </section>
-    <section class="container d-flex justify-content-center p-4">
-       <div class="row">
-           <div class="col d-flex">
-               <label for="roastSelect">
-                <select class="form-select-lg text-center" id="roastSelect" style="font-weight: bold">
-                   <option selected>Pick a roast</option>
-                   <option value="light">light</option>
-                   <option value="medium">medium</option>
-                   <option value="dark">dark</option>
-                </select>
-               </label>
-           </div>
-           <div class="col">
-               <label for="inputForm">
-                    <input type="text" class="form-control" id="inputForm" placeholder="Coffee Name" style="font-family: Dancing Script, cursive; font-weight: bold">
-               </label>
-           </div>
-       </div>
-    </section>
+
     <footer class="container-fluid" id="bottom">
         <div class="row">
             <div class="col">
