@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
 </head>
-<body class="bg">
+<body class="bg" style="background-image: url(img/coffee-bc.jpeg)">
 <div class="page-wrapper">
     <header class="navbar fc">
         <div class="container-fluid custom"  style="background-image: url(img/coffee-header.jpg); width: 100%; height: 100%; background-repeat: no-repeat; background-size: cover;">
@@ -21,7 +21,7 @@
     <div class="row align-items-center">
         <div class="col">
             <label for="roast-selection">
-                <select id="roast-selection">
+                <select class="form-select-lg"  id="roast-selection">
                     <option value="" selected>All</option>
                     <option value="light">light</option>
                     <option value="medium">medium</option>
@@ -30,16 +30,36 @@
             </label>
         </div>
         <div class="col">
-            <button class="btn btn-outline-secondary" id="addBox">Add New Coffee</button>
+            <button class="btn btn-dark" id="addBox" style="width: 100%; background-color: #79554899; color: #000">Add New Coffee</button>
         </div>
     </div>
 </section>
-<section class="container">
+<section class="container-fluid">
     <div class="row start-cards">
-
+<!--COFFEE CARDS ARE ADDED HERE-->
     </div>
 </section>
 
+</div>
+<div class="container">
+    <header class="text-center my-4">
+        <h1>Add a Coffee List</h1>
+    </header>
+    <main class="row">
+        <section class="border border-lg-none p-4 col-lg-4">
+            <form id="to-do-form">
+                <h3><label class="form-label" for="to-do">Enter coffee you want to add</label></h3>
+                <input class="form-control" type="text" name="to-do" id="to-do">
+                <div class="d-grid"><button class="btn btn-secondary mt-3 add">Add To-Do</button></div>
+            </form>
+        </section>
+        <section class="my-4 my-lg-0 col-lg-8">
+            <h3>Coffees Added</h3>
+            <ul class="list-group" id="to-do-list">
+
+            </ul>
+        </section>
+    </main>
 </div>
 
 

@@ -17,17 +17,50 @@ const coffees = [
 
 const renderCoffee = (coffees) => {
     const coffeeCard = document.createElement('div');
-    coffeeCard.classList.add('col-auto', 'flex-wrap', 'justify-content-center', 'align-items-center', 'd-flex');
+    coffeeCard.classList.add('col', 'flex-wrap', 'justify-content-center', 'align-items-center', 'd-flex');
     let coffeeImage;
-    switch (coffees.roast.toLowerCase()) {
-        case "light":
-            coffeeImage = "img/darkRoast10.jpeg";
+    switch (coffees.name.toLowerCase()) {
+        case "light city":
+            coffeeImage = "img/darkRoast1.webp";
             break;
-        case "medium":
+        case "half city":
+            coffeeImage = "img/darkRoast2.jpeg";
+            break;
+        case "cinnamon":
             coffeeImage = "img/darkRoast3.jpeg";
             break;
-        case "dark":
+        case "city":
             coffeeImage = "img/darkRoast4.jpeg";
+            break;
+        case "american":
+            coffeeImage = "img/darkRoast5.jpeg";
+            break;
+        case "breakfast":
+            coffeeImage = "img/darkRoast6.jpeg";
+            break;
+        case "high":
+            coffeeImage = "img/darkRoast7.jpeg";
+            break;
+        case "continental":
+            coffeeImage = "img/darkRoast8.jpeg";
+            break;
+        case "new orleans":
+            coffeeImage = "img/darkRoast9.jpeg";
+            break;
+        case "european":
+            coffeeImage = "img/darkRoast10.jpeg";
+            break;
+        case "espresso":
+            coffeeImage = "img/darkRoast11.jpeg";
+            break;
+        case "viennese":
+            coffeeImage = "img/darkRoast12.jpeg";
+            break;
+        case "italian":
+            coffeeImage = "img/darkRoast13.jpeg";
+            break;
+        case "french":
+            coffeeImage = "img/darkRoast14.jpeg";
             break;
         default:
             coffeeImage = "https://via.placeholder.com/84x70?";
@@ -35,7 +68,7 @@ const renderCoffee = (coffees) => {
     coffeeCard.innerHTML = `
         <div class="card custom border border-black rounded m-2" style="width: 18rem;">
         <img src="${coffeeImage}" class="card-img-top" alt="coffee pic">
-        <div class="card-body coffee">
+        <div class="coffee">
             <p>${coffees.name}</p>
             <p>${coffees.roast}</p>
         </div>
@@ -83,5 +116,29 @@ function updateCoffees(coffees) {
     searchSection.addEventListener('input', e=>{
         e.preventDefault();
         updateCoffees(coffees);
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+        const toDoForm = document.getElementById('to-do-form');
+        const toDoList = document.getElementById('to-do-list');
+
+        toDoForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+
+            const toDoInput = document.getElementById('to-do');
+            const toDoValue = toDoInput.value;
+
+            if (toDoValue.trim() !== '') {
+                // Create a new list item
+                const listItem = document.createElement('li');
+                listItem.className = 'list-group-item';
+                listItem.textContent = toDoValue;
+
+                // Append the new list item to the to-do list
+                toDoList.appendChild(listItem);
+
+                // Clear the input field
+                toDoInput.value = '';
+            }
+        });
     });
 })();
