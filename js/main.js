@@ -106,7 +106,7 @@ function updateCoffees(coffees) {
 const addBtn = document.querySelector('#addBox');
 addBtn.addEventListener('click', e=>{
     e.preventDefault();
-    const roastValue = document.querySelector('#roast-selection').value;
+    const roastValue = document.querySelector('#roastSelect').value;
     const coffeeName = document.querySelector('#inputForm').value;
     const newCoffee = {
         id: coffees.length + 1,
@@ -115,7 +115,7 @@ addBtn.addEventListener('click', e=>{
     };
     coffees.push(newCoffee);
     updateCoffees(coffees);
-    document.querySelector('#inputForm').value = '';
+    document.querySelector('#coffee-name').value = '';
     document.querySelector('#roast-selection').value = '';
 });
 
