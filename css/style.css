@@ -32,9 +32,10 @@ h1 {
 img {
     height: 200px;
     width: 75px;
-
 }
-
-
+label {
+    padding: unset ;
+    margin: unset;
+}
 
 

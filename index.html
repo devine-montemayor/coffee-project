@@ -9,7 +9,7 @@
 <body class="bg" style="background-image: url(img/coffee-bc.jpeg)">
 <div class="page-wrapper">
     <header class="navbar fc">
-        <div class="container-fluid custom"  style="background-image: url(img/coffee-header.jpg); width: 100%; height: 100%; background-repeat: no-repeat; background-size: cover;">
+        <div class="container-fluid"  style="background-image: url(img/coffee-header.jpg); width: 100%; height: 100%; background-repeat: no-repeat; background-size: cover;">
             <a>D & M Coffee</a>
             <form class="d-flex" role="search">
                 <input id="search" class="form-control me-2" type="search" placeholder="Search your coffee.." aria-label="Search">
@@ -30,7 +30,9 @@
             </label>
         </div>
         <div class="col">
-            <button class="btn btn-dark" id="addBox" style="width: 100%; background-color: #79554899; color: #000">Add New Coffee</button>
+            <a href="#bottom">
+                <button class="btn" id="addBox" style="width: 100%; background-color: #000; color: #fff; font-family: Dancing Script, cursive; font-size: 22px" href="#bottom">Add New Coffee</button>
+            </a>
         </div>
     </div>
 </section>
@@ -39,28 +41,34 @@
 <!--COFFEE CARDS ARE ADDED HERE-->
     </div>
 </section>
-
+    <section class="container">
+       <div class="row">
+           <div class="col d-flex">
+               <label for="roastSelect">
+                <select class="form-select-lg text-center" id="roastSelect" style="font-weight: bold">
+                   <option selected>Pick a roast</option>
+                   <option value="light">light</option>
+                   <option value="medium">medium</option>
+                   <option value="dark">dark</option>
+                </select>
+               </label>
+           </div>
+           <div class="col">
+               <label for="inputForm">
+                    <input type="text" class="form-control" id="inputForm" placeholder="Coffee Name" style="font-family: Dancing Script, cursive; font-weight: bold">
+               </label>
+           </div>
+       </div>
+    </section>
+    <footer class="container-fluid" id="bottom">
+        <div class="row">
+            <div class="col">
+                <p class="text-center">D & M Coffee</p>
+            </div>
+        </div>
+    </footer>
 </div>
-<div class="container">
-    <header class="text-center my-4">
-        <h1>Add a Coffee List</h1>
-    </header>
-    <main class="row">
-        <section class="border border-lg-none p-4 col-lg-4">
-            <form id="to-do-form">
-                <h3><label class="form-label" for="to-do">Enter coffee you want to add</label></h3>
-                <input class="form-control" type="text" name="to-do" id="to-do">
-                <div class="d-grid"><button class="btn btn-secondary mt-3 add">Add To-Do</button></div>
-            </form>
-        </section>
-        <section class="my-4 my-lg-0 col-lg-8">
-            <h3>Coffees Added</h3>
-            <ul class="list-group" id="to-do-list">
 
-            </ul>
-        </section>
-    </main>
-</div>
 
 
 <script src="./js/main.js"></script>
