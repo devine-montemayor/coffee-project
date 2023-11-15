@@ -2,33 +2,23 @@
 /*TODO: each coffee is displayed in a div that contains a heading displaying the coffee name, and the type of roast in a paragraph. Don't display the ids, these are only for our application's internal use*/
 /*TODO: When the page loads, the coffees should be sorted by their ids in ascending order*/
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Dancing+Script:wght@400;500;600;700&family=Lobster&display=swap');
-.page-wrapper {
-    background-color: #dadada;
-}
-/*p .card-text{*/
-/*    margin-bottom: 0;*/
-/*}*/
+
+
 div .custom {
     background-color: #79554899;
     border: 2px inset black;
 }
-
-table {
-    border-collapse: collapse;
-    margin: 15px 0;
+div .custom:hover {
+    background-color: #795548;
+    border: 2px inset black;
+}
+.fc {
+    font-family: "Dancing Script", cursive;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: white;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
-}
-body {
-    font-family: "Abel", sans-serif;
-}
-
-header {
-    font-family: "Abel", sans-serif;
-}
 
 
 

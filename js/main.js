@@ -14,12 +14,27 @@ const coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
+
 const renderCoffee = (coffees) => {
     const coffeeCard = document.createElement('div');
-    coffeeCard.classList.add('d-flex','col-4');
+    coffeeCard.classList.add('col-6', 'flex-wrap');
+    let coffeeImage;
+    switch (coffees.roast.toLowerCase()) {
+        case "light":
+            coffeeImage = "img/darkRoast10.jpeg";
+            break;
+        case "medium":
+            coffeeImage = "img/darkRoast2.jpeg";
+            break;
+        case "dark":
+            coffeeImage = "img/darkRoast3.jpeg";
+            break;
+        default:
+            coffeeImage = "https://via.placeholder.com/84x70?";
+    }
     coffeeCard.innerHTML = `
-        <div class="card" style="width: 18rem;">
-        <img src="" class="card-img-top" alt="coffee pic">
+        <div class="card custom border border-black rounded" style="width: 18rem;">
+        <img src="${coffeeImage}" class="card-img-top" alt="coffee pic">
         <div class="card-body coffee">
             <p>${coffees.name}</p>
             <p>${coffees.roast}</p>

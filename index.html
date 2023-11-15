@@ -6,11 +6,11 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
 </head>
-<body>
+<body class="bg">
 <div class="page-wrapper">
-    <header class="navbar bg-body-tertiary">
-        <div class="container-fluid custom">
-            <a class="navbar-brand">Devine and Montemayor Coffee</a>
+    <header class="navbar fc">
+        <div class="container-fluid custom"  style="background-image: url(img/coffee-header.jpg); width: 100%; height: 100%; background-repeat: no-repeat; background-size: cover;">
+            <a>D & M Coffee</a>
             <form class="d-flex" role="search">
                 <input id="search" class="form-control me-2" type="search" placeholder="Search your coffee.." aria-label="Search">
             </form>
@@ -20,22 +20,24 @@
     <section class="container text-center">
     <div class="row align-items-center">
         <div class="col">
-                <select id="roast-selection">
-                    <option value="" selected>All</option>
-                    <option value="light">light</option>
-                    <option value="medium">medium</option>
-                    <option value="dark">dark</option>
-                </select>
+            <select id="roast-selection">
+                <option value="" selected>All</option>
+                <option value="light">light</option>
+                <option value="medium">medium</option>
+                <option value="dark">dark</option>
+            </select>
         </div>
     </div>
 </section>
-<section class="container start-cards">
+<section class="container">
+    <div class="row start-cards">
 <!--    <div class="card" style="width: 18rem;">-->
 <!--        <img src="https://placehold.jp/150x150.png" class="card-img-top" alt="coffee pic">-->
 <!--        <div class="card-body coffee">-->
 <!--            <p class="card-text text-center"></p>-->
 <!--        </div>-->
 <!--    </div>-->
+    </div>
 </section>
 
 </div>
