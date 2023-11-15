@@ -9,26 +9,35 @@
 <body>
 <div class="page-wrapper">
     <header class="navbar bg-body-tertiary">
-        <div class="container-fluid">
+        <div class="container-fluid custom">
             <a class="navbar-brand">Devine and Montemayor Coffee</a>
             <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search your coffee.." aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <input id="search" class="form-control me-2" type="search" placeholder="Search your coffee.." aria-label="Search">
             </form>
         </div>
     </header>
 
-<form>
-    <label for="roast-selection"></label>
-    <select id="roast-selection">
-        <option>light</option>
-        <option>medium</option>
-        <option>dark</option>
-    </select>
-    <input id="submit" type="submit" />
-</form>
-
-<table>
+    <section class="container text-center">
+    <div class="row align-items-center">
+        <div class="col">
+                <select id="roast-selection">
+                    <option value="" selected>All</option>
+                    <option value="light">light</option>
+                    <option value="medium">medium</option>
+                    <option value="dark">dark</option>
+                </select>
+        </div>
+    </div>
+</section>
+<section class="container start-cards">
+<!--    <div class="card" style="width: 18rem;">-->
+<!--        <img src="https://placehold.jp/150x150.png" class="card-img-top" alt="coffee pic">-->
+<!--        <div class="card-body coffee">-->
+<!--            <p class="card-text text-center"></p>-->
+<!--        </div>-->
+<!--    </div>-->
+</section>
+    <table>
     <thead>
     <tr>
         <th>ID</th>

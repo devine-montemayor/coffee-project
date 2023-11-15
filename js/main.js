@@ -1,36 +1,3 @@
-"use strict"
-
-function renderCoffee(coffee) {
-    let html = '<tr class="coffee">';
-    html += `<td>${coffee.id}</td>`;
-    html += `<td>${coffee.name}</td>`;
-    html += `<td>${coffee.roast}</td>`;
-    html += '</tr>';
-
-    return html;
-}
-
-function renderCoffees(coffees) {
-    let html = '';
-    for(let i = coffees.length - 1; i >= 0; i--) {
-        html += renderCoffee(coffees[i]);
-    }
-    return html;
-}
-
-function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
-    const selectedRoast = roastSelection.value;
-    const filteredCoffees = [];
-    coffees.forEach( coffee => {
-        if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
-        }
-    });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
-}
-
-// from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 const coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
@@ -47,11 +14,59 @@ const coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
+const renderCoffee = (coffees) => {
+    const coffeeCard = document.createElement('div');
+    coffeeCard.classList.add('d-flex','col-4');
+    coffeeCard.innerHTML = `
+        <div class="card" style="width: 18rem;">
+        <img src="https://placehold.jp/75x75.png" class="card-img-top" alt="coffee pic">
+        <div class="card-body coffee">
+            <p>${coffees.name}</p>
+            <p>${coffees.roast}</p>
+        </div>
+    </div>
+    `;
+    return coffeeCard;
+}
+function updateCoffees(coffees) {
+    const coffeeContainer = document.querySelector('.start-cards');
+    coffeeContainer.innerHTML = '';
+    const roastValue = document.querySelector('#roast-selection').value;
+    let filteredCoffees = coffees;
+    filteredCoffees = filteredCoffees.filter((coffee)=>{
+        if(!roastValue){
+            return true;
+        }
+        return coffee.roast.toLowerCase() === roastValue.toLowerCase();
+    });
 
-const tbody = document.querySelector('#coffees');
-const submitButton = document.querySelector('#submit');
-const roastSelection = document.querySelector('#roast-selection');
+    const searchValue = document.querySelector('#search').value;
+    filteredCoffees = filteredCoffees.filter((coffee) => {
+        if(!searchValue){
+            return true;
+        }
+        return coffee.name.toLowerCase().includes(searchValue.toLowerCase());
+    });
 
-tbody.innerHTML = renderCoffees(coffees);
+    const coffeeFragment = document.createDocumentFragment();
+    for (let coffee of filteredCoffees) {
+        coffeeFragment.appendChild(renderCoffee(coffee));
+    }
+    coffeeContainer.appendChild(coffeeFragment);
+}
 
-submitButton.addEventListener('click', updateCoffees);
+// MAIN
+(() => {
+    updateCoffees(coffees);
+    const menu = document.querySelector('.start-cards');
+    const roastSelection = document.querySelector('#roast-selection');
+    const searchSection = document.querySelector('#search');
+    roastSelection.addEventListener('change', e=>{
+        e.preventDefault();
+        updateCoffees(coffees);
+    });
+    searchSection.addEventListener('input', e=>{
+        e.preventDefault();
+        updateCoffees(coffees);
+    });
+})();
