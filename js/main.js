@@ -17,17 +17,17 @@ const coffees = [
 
 const renderCoffee = (coffees) => {
     const coffeeCard = document.createElement('div');
-    coffeeCard.classList.add('col-6', 'flex-wrap');
+    coffeeCard.classList.add('col-auto', 'flex-wrap', 'justify-content-center', 'align-items-center', 'd-flex');
     let coffeeImage;
     switch (coffees.roast.toLowerCase()) {
         case "light":
             coffeeImage = "img/darkRoast10.jpeg";
             break;
         case "medium":
-            coffeeImage = "img/darkRoast2.jpeg";
+            coffeeImage = "img/darkRoast3.jpeg";
             break;
         case "dark":
-            coffeeImage = "img/darkRoast3.jpeg";
+            coffeeImage = "img/darkRoast4.jpeg";
             break;
         default:
             coffeeImage = "https://via.placeholder.com/84x70?";
