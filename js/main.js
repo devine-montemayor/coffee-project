@@ -19,7 +19,7 @@ const renderCoffee = (coffees) => {
     coffeeCard.classList.add('d-flex','col-4');
     coffeeCard.innerHTML = `
         <div class="card" style="width: 18rem;">
-        <img src="https://placehold.jp/75x75.png" class="card-img-top" alt="coffee pic">
+        <img src="" class="card-img-top" alt="coffee pic">
         <div class="card-body coffee">
             <p>${coffees.name}</p>
             <p>${coffees.roast}</p>

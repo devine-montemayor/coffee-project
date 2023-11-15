@@ -1,3 +1,7 @@
+/*update fonts, add images,*/
+/*TODO: each coffee is displayed in a div that contains a heading displaying the coffee name, and the type of roast in a paragraph. Don't display the ids, these are only for our application's internal use*/
+/*TODO: When the page loads, the coffees should be sorted by their ids in ascending order*/
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Dancing+Script:wght@400;500;600;700&family=Lobster&display=swap');
 .page-wrapper {
     background-color: #dadada;
 }
@@ -18,5 +22,14 @@ td, th {
     border: 1px solid black;
     padding: 5px 10px;
 }
+body {
+    font-family: "Abel", sans-serif;
+}
+
+header {
+    font-family: "Abel", sans-serif;
+}
+
+
 
 
