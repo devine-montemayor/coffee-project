@@ -44,6 +44,7 @@
     background-size: cover;
     width: 100%;
     height: 100%;
+    border: 5px ridge #795548;
 }
 div .custom:hover {
     background-color: #795548;

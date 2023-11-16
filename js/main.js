@@ -122,8 +122,8 @@ const updateCoffees = (coffees) => {
         const coffeeName = document.querySelector('#inputForm').value;
         const newCoffee = {
             id: coffees.length + 1,
-            name: coffeeName,
-            roast: roastValue
+            name: coffeeName.charAt(0).toUpperCase() + coffeeName.slice(1),
+            roast: roastValue.charAt(0).toUpperCase() + roastValue.slice(1)
         };
         coffees.push(newCoffee);
         updateCoffees(coffees);
