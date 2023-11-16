@@ -23,6 +23,7 @@
 #roastSelect {
     font-weight: bold;
     position: relative;
+    font-family: "Dancing Script", cursive;
 }
 #bg {
     position: relative;
@@ -35,7 +36,7 @@
     top: 0;
     left: 0;
     background-color: #fff;
-    opacity: .3;
+    opacity: .2;
     width: 100%;
     height: 100%;
 }
@@ -49,7 +50,8 @@
 div .custom:hover {
     background-color: #795548;
     border: 2px inset black;
-    opacity: .5;
+    opacity: .3;
+    transition: ease all .5s;
 }
 .coffee {
     background-color: #000;
