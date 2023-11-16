@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
 </head>
-<body class="bg" style="background-image: url(img/coffee-bc.jpeg);">
+<body id="bg">
 <div class="page-wrapper">
     <header class="container-fluid navbar fc">
-        <div class="row"  style="background-image: url(img/coffee-header.jpg); width: 100%; height: 100%; background-size: cover;">
+        <div id="header" class="row">
             <div class="col">
                 <a>D & M Coffee</a>
             </div>
@@ -31,9 +31,9 @@
     <section class="container text-center m-5">
     <div class="row align-items-center">
         <div class="d-flex flex-column">
-            <button class="btn" id="addBox" style="width: 100%; background-color: #000; color: #fff; font-family: Dancing Script, cursive; font-size: 22px" href="#bottom">Add New Coffee</button>
+            <button class="btn" id="addBox">Add New Coffee</button>
             <label class="my-2" for="roastSelect">
-                <select class="fixed text-center" id="roastSelect" style="font-weight: bold">
+                <select class="fixed text-center" id="roastSelect">
                     <option selected>Choose a roast to add...</option>
                     <option value="light">light</option>
                     <option value="medium">medium</option>
@@ -41,7 +41,7 @@
                 </select>
             </label>
             <label class="my-2" for="inputForm">
-                <input type="text" class="fixed" id="inputForm" placeholder="Name Your Coffee" style="font-family: Dancing Script, cursive; font-weight: bold">
+                <input type="text" class="fixed" id="inputForm" placeholder="Name Your Coffee">
             </label>
         </div>
     </div>
@@ -51,12 +51,12 @@
 <!--COFFEE CARDS ARE ADDED HERE-->
         </div>
     </section>
-    <footer class="container-fluid" id="bottom" style="background-color: #000">
+    <footer class="container-fluid" id="footer">
         <div class="row">
-            <div class="d-flex col col-6 justify-content-center align-items-center"  style="color: #fff">
+            <div class="d-flex col col-6 justify-content-center align-items-center">
                 <p>D & M Coffee</p>
             </div>
-            <div class="col col-6  justify-content-center align-items-center" style="color: #fff">
+            <div class="col col-6  justify-content-center align-items-center">
                 <p>Contact Us</p>
                 <p>123-456-7890</p>
                 <p>DnMCoffee@email.com</p>

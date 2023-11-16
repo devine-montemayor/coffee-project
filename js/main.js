@@ -62,7 +62,7 @@ const renderCoffee = (coffees) => {
             coffeeImage = "img/darkRoast14.jpeg";
             break;
         default:
-            coffeeImage = "img/LightRoast._new_web_1024x.webp";
+            coffeeImage = "img/coffee-med.jpg";
     }
     coffeeCard.innerHTML = `
         <div class="card custom border border-black rounded m-2" style="width: 18rem;">

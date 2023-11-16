@@ -1,23 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Dancing+Script:wght@400;500;600;700&family=Lobster&display=swap');
+#addBox {
+     width: 100%;
+     background-color: #000;
+     color: #fff;
+     font-family: "Dancing Script", cursive;
+     font-size: 22px;
 
-.coffee {
+ }
+#footer {
     background-color: #000;
-    color: white;
+    color: #ffffff;
 }
-
+#inputForm {
+    font-family: "Dancing Script", cursive;
+    font-weight: bold;
+}
+#roastSelect {
+    font-weight: bold;
+}
+#bg {
+    background-image: url(/img/coffee-bc.jpeg);
+    background-size: cover;
+}
+#header {
+    background-image: url(/img/coffee-header.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
 div .custom:hover {
     background-color: #795548;
     border: 2px inset black;
     opacity: .5;
 }
-
+.coffee {
+    background-color: #000;
+    color: white;
+}
 .fc {
     font-family: "Dancing Script", cursive;
     font-weight: bold;
     font-size: 2.5rem;
     color: white;
 }
-
+label .fixed {
+    height: 38px;
+    width: 300px;
+    border: 2px solid black;
+}
+img {
+    height: 200px;
+    width: 75px;
+    border: 10px ridge #795548;
+    box-shadow: black;
+}
 p {
     font-size: 2rem;
     text-align: center;
@@ -26,17 +62,6 @@ p {
     font-family: Papyrus, fantasy;
 }
 
-img {
-    height: 200px;
-    width: 75px;
-    border: 10px ridge #795548;
-    box-shadow: black;
-}
 
-label .fixed {
-    height: 38px;
-    width: 300px;
-    border: 2px solid black;
-}
 
 
