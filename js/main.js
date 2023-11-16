@@ -104,7 +104,6 @@ const updateCoffees = (coffees) => {
 
 // MAIN
 (() => {
-
     updateCoffees(coffees);
     const roastSelection = document.querySelector('#roast-selection');
     const searchSection = document.querySelector('#search');
