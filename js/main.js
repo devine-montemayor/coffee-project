@@ -102,12 +102,10 @@ function updateCoffees(coffees) {
     coffeeContainer.appendChild(coffeeFragment);
 }
 
-
 // MAIN
 (() => {
 
     updateCoffees(coffees);
-    const menu = document.querySelector('.start-cards');
     const roastSelection = document.querySelector('#roast-selection');
     const searchSection = document.querySelector('#search');
     roastSelection.addEventListener('change', e=>{
@@ -120,7 +118,6 @@ function updateCoffees(coffees) {
     });
     const addBtn = document.querySelector('#addBox');
     addBtn.addEventListener('click', e=>{
-        e.preventDefault();
         const roastValue = document.querySelector('#roastSelect').value;
         const coffeeName = document.querySelector('#inputForm').value;
         const newCoffee = {
@@ -130,8 +127,6 @@ function updateCoffees(coffees) {
         };
         coffees.push(newCoffee);
         updateCoffees(coffees);
-        document.querySelector('#coffee-name').value = '';
-        document.querySelector('#roast-selection').value = '';
     });
 
 })();
