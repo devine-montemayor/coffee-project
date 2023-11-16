@@ -75,7 +75,7 @@ const renderCoffee = (coffees) => {
     `;
     return coffeeCard;
 }
-function updateCoffees(coffees) {
+const updateCoffees = (coffees) => {
     const coffeeContainer = document.querySelector('.start-cards');
     coffeeContainer.innerHTML = '';
     const roastValue = document.querySelector('#roast-selection').value;
@@ -128,5 +128,4 @@ function updateCoffees(coffees) {
         coffees.push(newCoffee);
         updateCoffees(coffees);
     });
-
 })();
