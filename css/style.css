@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Dancing+Script:wght@400;500;600;700&family=Lobster&display=swap');
 #addBox {
-     width: 100%;
-     background-color: #000;
-     color: #fff;
-     font-family: "Dancing Script", cursive;
-     font-size: 22px;
-
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    font-family: "Dancing Script", cursive;
+    font-size: 22px;
+    border-radius: 999px;
+    border: 5px ridge #795548;
  }
 #footer {
     background-color: #000;
@@ -47,7 +48,8 @@ div .custom:hover {
 label .fixed {
     height: 38px;
     width: 300px;
-    border: 2px solid black;
+    border: 5px ridge #795548;
+    box-shadow: black;
 }
 img {
     height: 200px;
@@ -61,6 +63,9 @@ p {
     padding: unset;
     margin-top: 5px;
     font-family: Papyrus, fantasy;
+}
+a p {
+    font-size: 20px;
 }
 
 
