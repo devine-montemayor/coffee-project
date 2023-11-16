@@ -6,28 +6,31 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
 </head>
-<body class="bg" style="background-image: url(img/coffee-bc.jpeg)">
+<body class="bg" style="background-image: url(img/coffee-bc.jpeg);">
 <div class="page-wrapper">
-    <header class="navbar fc">
-        <div class="container-fluid"  style="background-image: url(img/coffee-header.jpg); width: 100%; height: 100%; background-repeat: no-repeat; background-size: cover;">
-            <a>D & M Coffee</a>
-            <form class="d-flex" role="search">
-                <input id="search" class="form-control me-2" type="search" placeholder="Search your coffee.." aria-label="Search">
-            </form>
-            <label for="roast-selection">
-                <select class="form-select-lg m-2"  id="roast-selection">
-                    <option value="" selected>All</option>
-                    <option value="light">light</option>
-                    <option value="medium">medium</option>
-                    <option value="dark">dark</option>
-                </select>
-            </label>
+    <header class="container-fluid navbar fc">
+        <div class="row"  style="background-image: url(img/coffee-header.jpg); width: 100%; height: 100%; background-repeat: no-repeat; background-size: cover;">
+            <div class="col">
+                <a>D & M Coffee</a>
+            </div>
+            <div class="d-flex col justify-content-end align-items-center">
+                <form class="d-flex form-control-lg" role="search">
+                    <input id="search" class="form-control" type="search" placeholder="Search your coffee.." aria-label="Search">
+                </form>
+                <label for="roast-selection">
+                    <select class="form-select-lg m-2"  id="roast-selection">
+                        <option value="" selected>All</option>
+                        <option value="light">light</option>
+                        <option value="medium">medium</option>
+                        <option value="dark">dark</option>
+                    </select>
+                </label>
+            </div>
         </div>
     </header>
-
     <section class="container text-center m-5">
     <div class="row align-items-center">
-        <div class="col">
+        <div class="d-flex flex-column">
             <button class="btn" id="addBox" style="width: 100%; background-color: #000; color: #fff; font-family: Dancing Script, cursive; font-size: 22px" href="#bottom">Add New Coffee</button>
             <label class="my-2" for="roastSelect">
                 <select class="fixed text-center" id="roastSelect" style="font-weight: bold">
@@ -43,22 +46,25 @@
         </div>
     </div>
 </section>
-    <section class="container-fluid">
-    <div class="row start-cards">
+    <section class="container">
+        <div class="row start-cards">
 <!--COFFEE CARDS ARE ADDED HERE-->
-    </div>
+        </div>
     </section>
-
-    <footer class="container-fluid" id="bottom">
+    <footer class="container-fluid" id="bottom" style="background-color: #000">
         <div class="row">
-            <div class="col">
-                <p class="text-center">D & M Coffee</p>
+            <div class="d-flex col col-6 justify-content-center align-items-center"  style="color: #fff">
+                <p>D & M Coffee</p>
+            </div>
+            <div class="col col-6  justify-content-center align-items-center" style="color: #fff">
+                <p>Contact Us</p>
+                <p>123-456-7890</p>
+                <p>DnMCoffee@email.com</p>
+                <p>123 Coffee Lane Graceland, Tx </p>
             </div>
         </div>
     </footer>
 </div>
-
-
 
 <script src="./js/main.js"></script>
 </body>
